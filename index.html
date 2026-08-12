@@ -92,18 +92,20 @@ nav.links a:hover{color:#fff}
 /* ---------- HERO: torchlight ---------- */
 .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;
   padding:0 0 clamp(48px,7vh,90px)}
-.hero .art{position:absolute;inset:0;background:url('glimm-hero.jpg') 50% 88%/175% no-repeat;
-  filter:saturate(1.05) contrast(1.05)}
+.hero .art{position:absolute;inset:0;background:url('ill-crab.jpg') 74% 46%/cover no-repeat;
+  filter:invert(1) contrast(1.28) brightness(1.1);mix-blend-mode:screen;opacity:.95}
+.hero .art2{position:absolute;inset:0;background:url('ill-map.jpg') 50% 50%/cover no-repeat;
+  filter:invert(1);mix-blend-mode:screen;opacity:.13}
 /* the dark the torch cuts through */
-.hero .dark{position:absolute;inset:0;background:rgba(4,5,8,.9);
-  -webkit-mask:radial-gradient(circle 300px at var(--mx,62%) var(--my,38%),transparent 0%,transparent 38%,#000 82%);
-          mask:radial-gradient(circle 300px at var(--mx,62%) var(--my,38%),transparent 0%,transparent 38%,#000 82%);
+.hero .dark{position:absolute;inset:0;background:rgba(5,6,10,.8);
+  -webkit-mask:radial-gradient(circle 340px at var(--mx,64%) var(--my,42%),transparent 0%,transparent 30%,#000 76%);
+          mask:radial-gradient(circle 340px at var(--mx,64%) var(--my,42%),transparent 0%,transparent 30%,#000 76%);
   transition:-webkit-mask-position .1s linear}
-.hero .beam{position:absolute;width:640px;height:640px;left:var(--mx,62%);top:var(--my,38%);
+.hero .beam{position:absolute;width:760px;height:760px;left:var(--mx,62%);top:var(--my,38%);
   transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,rgba(168,242,74,.14),rgba(110,201,230,.06) 40%,transparent 66%)}
+  background:radial-gradient(circle,rgba(255,246,214,.16),rgba(168,242,74,.07) 34%,transparent 62%)}
 .hero .floor{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,0) 30%,rgba(7,8,12,.86) 76%,var(--ink) 100%)}
+  background:linear-gradient(180deg,rgba(7,8,12,.7) 0%,rgba(7,8,12,.15) 26%,rgba(7,8,12,.8) 74%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:6}
 .eyebrow{display:inline-flex;align-items:center;gap:11px;font-weight:700;font-size:11.5px;letter-spacing:.24em;
   text-transform:uppercase;color:var(--acid);margin-bottom:24px}
@@ -116,6 +118,25 @@ nav.links a:hover{color:#fff}
   text-shadow:0 2px 20px rgba(0,0,0,.9)}
 .cta-row{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
 .torch-hint{margin-top:30px;font-size:11.5px;letter-spacing:.19em;text-transform:uppercase;color:rgba(236,231,218,.42)}
+
+/* ---------- ink illustrations ---------- */
+.ink{filter:invert(1) contrast(1.06);mix-blend-mode:screen}
+
+.inkband{position:relative;overflow:hidden;padding:0;background:var(--ink);
+  border-top:1px solid rgba(236,231,218,.07);border-bottom:1px solid rgba(236,231,218,.07)}
+.inkband .track{display:flex;gap:0;width:max-content;animation:drift 90s linear infinite}
+.inkband figure{position:relative;width:clamp(220px,20vw,320px);flex:0 0 auto}
+.inkband img{width:100%;height:clamp(300px,30vw,440px);object-fit:cover;object-position:50% 40%;
+  filter:invert(1) contrast(1.05);mix-blend-mode:screen;opacity:.85}
+.inkband::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--ink) 0%,transparent 14%,transparent 86%,var(--ink) 100%),
+             linear-gradient(180deg,rgba(7,8,12,.5),transparent 30%,transparent 70%,rgba(7,8,12,.7))}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.inkband .caption{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-family:var(--display);font-weight:900;font-size:clamp(22px,3.2vw,44px);color:#fff;
+  text-align:center;letter-spacing:-.02em;text-shadow:0 6px 40px rgba(0,0,0,.95);
+  font-variation-settings:'WONK' 1;max-width:22ch;line-height:1.05}
+.inkband .caption em{font-style:italic;color:var(--acid)}
 
 /* ---------- hazard tape ---------- */
 .tape{background:repeating-linear-gradient(45deg,var(--ink) 0 24px,var(--acid) 24px 48px);
@@ -140,6 +161,9 @@ nav.links a:hover{color:#fff}
 .chapter+.chapter{border-top:1px solid rgba(236,231,218,.07)}
 .chapter .wash{position:absolute;inset:0;z-index:0;opacity:.2;
   background:radial-gradient(85% 70% at var(--wx,78%) 42%,var(--accent),transparent 62%)}
+.chapter .plate{position:absolute;z-index:0;inset:0;pointer-events:none;
+  background-size:contain;background-repeat:no-repeat;background-position:var(--px,88%) 50%;
+  filter:invert(1);mix-blend-mode:screen;opacity:.2}
 .chapter .bignum{position:absolute;z-index:0;font-family:var(--display);font-weight:900;
   font-size:clamp(220px,34vw,460px);line-height:.7;color:rgba(236,231,218,.032);
   left:-.06em;bottom:-.16em;pointer-events:none;font-variation-settings:'WONK' 1}
@@ -168,10 +192,9 @@ nav.links a:hover{color:#fff}
 .ku b{color:#ffb84d}
 
 /* ---------- schools ---------- */
-#visits{background:
-  linear-gradient(180deg,rgba(7,8,12,.95),rgba(7,8,12,.99)),
-  url('boys-2.jpg') center 30%/cover fixed no-repeat;
-  border-top:1px solid rgba(236,231,218,.08);border-bottom:1px solid rgba(236,231,218,.08)}
+#visits{position:relative;border-top:1px solid rgba(236,231,218,.08);border-bottom:1px solid rgba(236,231,218,.08)}
+#visits::before{content:"";position:absolute;inset:0;background:url('ill-rook.jpg') 88% 40%/auto 118% no-repeat;
+  filter:invert(1);mix-blend-mode:screen;opacity:.17;pointer-events:none}
 .visit-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,4.6vw,58px);align-items:start;margin-top:26px}
 .offer{list-style:none;margin-top:24px;display:grid;gap:15px}
 .offer li{display:flex;gap:13px;align-items:flex-start;font-size:16.5px;color:#ddd8cb}
@@ -220,7 +243,9 @@ nav.links a:hover{color:#fff}
 /* ---------- newsletter ---------- */
 #newsletter{text-align:center;position:relative;overflow:hidden}
 #newsletter::before{content:"";position:absolute;inset:0;
-  background:radial-gradient(60% 55% at 50% 12%,rgba(168,242,74,.1),transparent 62%)}
+  background:radial-gradient(60% 55% at 50% 12%,rgba(168,242,74,.12),transparent 62%)}
+#newsletter::after{content:"";position:absolute;inset:0;background:url('ill-map.jpg') center/cover no-repeat;
+  filter:invert(1);mix-blend-mode:screen;opacity:.1;pointer-events:none}
 #newsletter .box{max-width:680px;margin:0 auto;position:relative;z-index:2}
 #newsletter .ml-form-embedContainer,#newsletter .ml-form-embedWrapper{background:transparent!important;
   box-shadow:none!important;border:0!important;max-width:520px!important;margin:22px auto 0!important}
@@ -303,6 +328,7 @@ ml('account','2499353');
 <!-- ================= HERO ================= -->
 <section class="hero" id="hero">
   <div class="art"></div>
+  <div class="art2"></div>
   <div class="dark" id="dark"></div>
   <div class="beam" id="beam"></div>
   <div class="floor"></div>
@@ -322,11 +348,34 @@ ml('account','2499353');
   <div class="run"><span>Tell no grown-ups</span><span>◈</span><span>Do not let her open my head</span><span>◈</span><span>Torch under the duvet recommended</span><span>◈</span><span>They hunt by sound</span><span>◈</span><span>May contain monsters</span><span>◈</span><span>Tell no grown-ups</span><span>◈</span><span>Do not let her open my head</span><span>◈</span><span>Torch under the duvet recommended</span><span>◈</span><span>They hunt by sound</span><span>◈</span><span>May contain monsters</span><span>◈</span></div>
 </div>
 
+
+<section class="inkband" aria-hidden="true">
+  <div class="track">
+    <figure><img src="ill-gate.jpg" alt=""></figure>
+    <figure><img src="ill-woods.jpg" alt=""></figure>
+    <figure><img src="ill-stairs.jpg" alt=""></figure>
+    <figure><img src="ill-crowd.jpg" alt=""></figure>
+    <figure><img src="ill-bedroom.jpg" alt=""></figure>
+    <figure><img src="ill-headphones.jpg" alt=""></figure>
+    <figure><img src="ill-ruin.jpg" alt=""></figure>
+    <figure><img src="ill-wall.jpg" alt=""></figure>
+    <figure><img src="ill-gate.jpg" alt=""></figure>
+    <figure><img src="ill-woods.jpg" alt=""></figure>
+    <figure><img src="ill-stairs.jpg" alt=""></figure>
+    <figure><img src="ill-crowd.jpg" alt=""></figure>
+    <figure><img src="ill-bedroom.jpg" alt=""></figure>
+    <figure><img src="ill-headphones.jpg" alt=""></figure>
+    <figure><img src="ill-ruin.jpg" alt=""></figure>
+    <figure><img src="ill-wall.jpg" alt=""></figure>
+  </div>
+  <p class="caption">Bikes, torches, and a hole in the world <em>nobody else noticed.</em></p>
+</section>
+
 <!-- ================= BOOKS ================= -->
 <section id="books">
 
   <article class="chapter reveal" style="--accent:var(--glimm);--wx:74%">
-    <div class="wash"></div><div class="bignum">01</div>
+    <div class="wash"></div><div class="plate" style="background-image:url('ill-radio.jpg');--px:86%"></div><div class="bignum">01</div>
     <div class="coverstage"><img src="boys-1.jpg" alt="The Weird Map in Mr Glimm's Skull — cover"></div>
     <div class="copy">
       <span class="tag"><i class="rule"></i> Felix Jones · Book One</span>
@@ -341,7 +390,7 @@ ml('account','2499353');
   </article>
 
   <article class="chapter flip reveal" style="--accent:var(--clock);--wx:26%">
-    <div class="wash"></div><div class="bignum">02</div>
+    <div class="wash"></div><div class="plate" style="background-image:url('ill-crab.jpg');--px:12%"></div><div class="bignum">02</div>
     <div class="coverstage"><img src="clockwork-cover.jpg" alt="The Clockwork Terror of Blackglass Island — cover"></div>
     <div class="copy">
       <span class="tag"><i class="rule"></i> Felix Jones · Book Two <b class="newflag">Out now</b></span>
@@ -356,7 +405,7 @@ ml('account','2499353');
   </article>
 
   <article class="chapter reveal" style="--accent:var(--deep);--wx:74%">
-    <div class="wash"></div><div class="bignum">03</div>
+    <div class="wash"></div><div class="plate" style="background-image:url('ill-door.jpg');--px:86%"></div><div class="bignum">03</div>
     <div class="coverstage"><img src="boys-2.jpg" alt="Terror From the Deep — cover"></div>
     <div class="copy">
       <span class="tag"><i class="rule"></i> A standalone adventure</span>
