@@ -516,6 +516,18 @@ ml('account','2499353');
     <h2 class="reveal" style="margin-inline:auto">Start with a free story.</h2>
     <p class="sub reveal" style="margin-inline:auto">Sign up and I'll send you “Everything Was Fine Until the Cheese”, a full Chaos &amp; Chills tale, plus first word on new books and school-visit dates. I won't spam you or lecture you, and you can unsubscribe whenever you like.</p>
     <div class="ml-embedded reveal" data-form="TISnjD"></div>
+    <script>
+    /* Backmatter attribution (2026-08-21): links from book backmatter carry ?src=bm;
+       those arrivals get the "Chaos & Chills — Backmatter signups" form (uPShEX,
+       form 196389041534404406) so MailerLite counts the source separately. Same
+       group and flow either way. Runs at parse time, before universal.js renders. */
+    try {
+      if (new URLSearchParams(location.search).get('src') === 'bm') sessionStorage.setItem('cc_src', 'bm');
+      if (sessionStorage.getItem('cc_src') === 'bm') {
+        document.querySelector('.ml-embedded[data-form="TISnjD"]').setAttribute('data-form', 'uPShEX');
+      }
+    } catch (e) {}
+    </script>
     <div class="msci reveal">
       <p>The story first appeared in <b>Mad Science!</b>, a Raconteur Press anthology edited by <b>Dave Freer</b>. There's a Book 2, as well.</p>
       <div class="msci-covers">
