@@ -439,6 +439,12 @@ ml('account','2489284');
     <h2 class="reveal">A free day that gets your reluctant readers to the last page.</h2>
     <p class="sub reveal">I'm Malory. I write adventure novels for children, I'm researching a doctorate on why kids stop reading for pleasure, and I spend whole days in schools turning that around. Pitched for <b>Years 4–6</b>.</p>
 
+    <div class="creds-strip reveal" style="margin:18px 0 6px 0">
+      <span class="cred-item"><span class="ctxt"><b>Jim Baen Memorial Award</b><small>2026 winner</small></span></span>
+      <span class="cred-item"><span class="ctxt"><b>University of Worcester</b><small>Doctoral researcher, children's reading for pleasure</small></span></span>
+      <span class="cred-item"><span class="ctxt"><b>Published by</b><small>Watchful Wizard &amp; Raconteur Press</small></span></span>
+    </div>
+
     <div class="visit-grid">
       <div class="reveal">
         <ul class="offer">
@@ -450,7 +456,8 @@ ml('account','2489284');
         </ul>
       </div>
 
-      <form class="panel reveal" action="https://formsubmit.co/hello@chaosandchills.co.uk" method="POST">
+      <div>
+      <form id="visit-form" class="panel reveal" action="https://formsubmit.co/hello@chaosandchills.co.uk" method="POST">
         <h3>Book a visit</h3>
         <p class="mini">Tell me about your school and I'll be in touch with dates.</p>
         <input type="hidden" name="_subject" value="New Chaos &amp; Chills school-visit enquiry">
@@ -467,9 +474,31 @@ ml('account','2489284');
           </select>
         </div>
         <div class="field"><label for="m">Anything else?</label><textarea id="m" name="message" rows="3"></textarea></div>
+        <div class="field"><label for="q">What are you asking about?</label>
+          <select id="q" name="enquiry_type">
+            <option>A free school visit</option>
+            <option>Class sets or a bulk order</option>
+            <option>Both</option>
+          </select>
+        </div>
+        <label class="consent" style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14px;line-height:1.5;color:var(--paper-dim)">
+          <input type="checkbox" id="optin" name="optin" value="yes" style="margin-top:3px;flex:0 0 auto">
+          <span>Also add me to the teachers' list &mdash; occasional emails about new books, visit dates and free classroom material. No more than one a month, and you can unsubscribe any time.</span>
+        </label>
         <button class="btn btn-acid" type="submit" style="margin-top:18px;width:100%;justify-content:center">Send enquiry</button>
         <p class="mini">Prefer email? <a href="mailto:hello@chaosandchills.co.uk" style="color:var(--acid)">hello@chaosandchills.co.uk</a></p>
       </form>
+
+      <div class="reveal" style="margin-top:26px;padding-top:22px;border-top:1px solid rgba(236,231,218,.14)">
+        <p class="kicker">Class sets and bulk orders</p>
+        <p class="mini" style="margin-top:8px">Buying for a class, a year group or the library? Order direct and I'll invoice the school,
+        so there's no card payment and no purchase order chasing through a retailer. The books come
+        in one delivery rather than in dribs and drabs, and I'll sign them. Tick "class sets or a
+        bulk order" on the form, say roughly how many you need and which titles, and I'll come back
+        with a price and a delivery date.</p>
+      </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -588,6 +617,41 @@ var io=new IntersectionObserver(function(es){
   es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%3*90)+'ms';io.observe(el)});
+</script>
+
+<!-- School-visit enquiry: always emails Malory via formsubmit, and ALSO subscribes the
+     teacher to the Teachers and Librarians group IF they ticked the box. The MailerLite
+     call is fire-and-forget and deliberately cannot block or break the enquiry — if it
+     fails, the enquiry still reaches the inbox exactly as before. Added 2026-08-25:
+     before this, every school enquiry was an email and nothing else, so the highest-value
+     contacts the imprint gets were never mailable again. -->
+<script>
+(function(){
+  var f = document.getElementById('visit-form');
+  if(!f) return;
+  var ML_ACCOUNT = '2489284';
+  var ML_FORM    = '196780548212917336';
+  var sent = false;
+  f.addEventListener('submit', function(){
+    if(sent) return;              // let the real submit through on the second pass
+    var optin = f.querySelector('#optin');
+    if(!optin || !optin.checked) return;   // no tick, no subscribe. Never assume consent.
+    sent = true;
+    try{
+      var fd = new FormData();
+      fd.append('fields[email]',       (f.querySelector('#e')||{}).value || '');
+      fd.append('fields[name]',        (f.querySelector('#n')||{}).value || '');
+      fd.append('fields[school]',      (f.querySelector('#s')||{}).value || '');
+      fd.append('fields[year_groups]', (f.querySelector('#y')||{}).value || '');
+      fd.append('fields[enquiry_type]',(f.querySelector('#q')||{}).value || '');
+      fd.append('fields[signup_source]','chaosandchills-schools-form');
+      fd.append('ml-submit','1');
+      fd.append('anticsrf','true');
+      fetch('https://assets.mailerlite.com/jsonp/'+ML_ACCOUNT+'/forms/'+ML_FORM+'/subscribe',
+            {method:'POST', body:fd, mode:'no-cors', keepalive:true});
+    }catch(e){ /* never block the enquiry */ }
+  });
+})();
 </script>
 </body>
 </html>
