@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" class="no-js">
 <head>
 <meta charset="UTF-8" />
+<script>document.documentElement.className=document.documentElement.className.replace("no-js","js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Chaos &amp; Chills · Funny-scary books for brave young readers | Malory</title>
+<title>Chaos &amp; Chills — Funny-Scary Books for Ages 9–12 | Malory</title>
 <meta name="description" content="Funny-scary adventure books for readers aged 9–12, by award-winning author Malory. FREE whole-day author visits for primary schools (Years 4–6)." />
 <meta name="theme-color" content="#07080c" />
+<link rel="canonical" href="https://chaosandchills.co.uk/" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preload" as="image" href="ill-crab-1600.webp" fetchpriority="high" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Chaos &amp; Chills: funny-scary books for readers 9–12" />
 <meta property="og:description" content="Funny-scary adventure books by Malory. Free author visits for primary schools (Years 4–6)." />
@@ -16,6 +19,107 @@
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://chaosandchills.co.uk/og-image.png" />
+<meta name="twitter:title" content="Chaos &amp; Chills: funny-scary books for readers 9–12" />
+<meta name="twitter:description" content="Funny-scary adventure books by Malory. Free author visits for primary schools (Years 4–6)." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://chaosandchills.co.uk/#website",
+      "url": "https://chaosandchills.co.uk/",
+      "name": "Chaos & Chills",
+      "description": "Funny-scary adventure books for readers aged 9–12 by Malory, and free whole-day author visits for primary schools.",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "https://chaosandchills.co.uk/#imprint" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://chaosandchills.co.uk/#imprint",
+      "name": "Chaos & Chills",
+      "url": "https://chaosandchills.co.uk/",
+      "logo": "https://chaosandchills.co.uk/og-image.png",
+      "email": "hello@chaosandchills.co.uk",
+      "founder": { "@id": "https://maloryauthor.com/#person" },
+      "sameAs": [ "https://www.instagram.com/chaoschills/" ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://maloryauthor.com/#person",
+      "name": "Malory",
+      "url": "https://maloryauthor.com/",
+      "image": "https://chaosandchills.co.uk/malory-photo.jpg",
+      "jobTitle": "Author",
+      "award": "Jim Baen Memorial Short Story Award 2026",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Worcester", "url": "https://www.worcester.ac.uk/" },
+      "sameAs": [ "https://maloryauthor.com/", "https://www.instagram.com/chaoschills/" ]
+    },
+    {
+      "@type": "BookSeries",
+      "@id": "https://chaosandchills.co.uk/#boys-own-adventures",
+      "name": "Boy's Own Adventures",
+      "url": "https://maloryauthor.com/series/boys-own-adventures.html",
+      "author": { "@id": "https://maloryauthor.com/#person" },
+      "genre": ["Children's Adventure", "Middle Grade Horror-Comedy"],
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 9, "suggestedMaxAge": 12 }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://chaosandchills.co.uk/#book-1",
+      "name": "The Weird Map in Mr Glimm's Skull",
+      "url": "https://maloryauthor.com/mr-glimms-skull.html",
+      "image": "https://chaosandchills.co.uk/boys-1.jpg",
+      "author": { "@id": "https://maloryauthor.com/#person" },
+      "isPartOf": { "@id": "https://chaosandchills.co.uk/#boys-own-adventures" },
+      "position": 1,
+      "inLanguage": "en-GB",
+      "bookFormat": ["https://schema.org/EBook", "https://schema.org/Paperback"],
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 9, "suggestedMaxAge": 12 },
+      "offers": { "@type": "Offer", "url": "https://links.maloryauthor.com/mr-glimm", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://chaosandchills.co.uk/#book-2",
+      "name": "The Clockwork Terror of Blackglass Island",
+      "url": "https://maloryauthor.com/clockwork-terror.html",
+      "image": "https://chaosandchills.co.uk/clockwork-cover.jpg",
+      "author": { "@id": "https://maloryauthor.com/#person" },
+      "isPartOf": { "@id": "https://chaosandchills.co.uk/#boys-own-adventures" },
+      "position": 2,
+      "inLanguage": "en-GB",
+      "bookFormat": ["https://schema.org/EBook", "https://schema.org/Paperback"],
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 9, "suggestedMaxAge": 12 },
+      "offers": { "@type": "Offer", "url": "https://links.maloryauthor.com/blackglass", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://chaosandchills.co.uk/#book-3",
+      "name": "Terror From the Deep",
+      "url": "https://maloryauthor.com/terror-from-the-deep.html",
+      "image": "https://chaosandchills.co.uk/boys-2.jpg",
+      "author": { "@id": "https://maloryauthor.com/#person" },
+      "isPartOf": { "@id": "https://chaosandchills.co.uk/#boys-own-adventures" },
+      "position": 3,
+      "inLanguage": "en-GB",
+      "bookFormat": "https://schema.org/Paperback",
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 9, "suggestedMaxAge": 12 },
+      "offers": { "@type": "Offer", "url": "https://links.maloryauthor.com/terror-from-the-deep", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://chaosandchills.co.uk/#school-visits",
+      "name": "Free whole-day author visit for primary schools",
+      "serviceType": "Author school visit",
+      "provider": { "@id": "https://maloryauthor.com/#person" },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "audience": { "@type": "EducationalAudience", "educationalRole": "teacher", "audienceType": "Primary schools, Years 4–6" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP", "url": "https://chaosandchills.co.uk/#visits" }
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +149,7 @@ body{
   background:var(--ink);color:var(--paper);font-family:var(--body);
   font-size:17px;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 
 /* ---------- grain + vignette ---------- */
@@ -97,9 +201,9 @@ nav.links a:hover{color:#fff}
 /* ---------- HERO: torchlight ---------- */
 .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;
   padding:0 0 clamp(48px,7vh,90px)}
-.hero .art{position:absolute;inset:0;background:url('ill-crab.jpg') 74% 46%/cover no-repeat;
+.hero .art{position:absolute;inset:0;background:url('ill-crab-1600.webp') 74% 46%/cover no-repeat;
   filter:invert(1) contrast(1.28) brightness(1.1);mix-blend-mode:screen;opacity:.95}
-.hero .art2{position:absolute;inset:0;background:url('ill-map.jpg') 50% 50%/cover no-repeat;
+.hero .art2{position:absolute;inset:0;background:url('ill-map-1200.webp') 50% 50%/cover no-repeat;
   filter:invert(1);mix-blend-mode:screen;opacity:.13}
 /* the dark the torch cuts through */
 .hero .dark{position:absolute;inset:0;background:rgba(5,6,10,.8);
@@ -200,7 +304,7 @@ nav.links a:hover{color:#fff}
 
 /* ---------- schools ---------- */
 #visits{position:relative;border-top:1px solid rgba(236,231,218,.08);border-bottom:1px solid rgba(236,231,218,.08)}
-#visits::before{content:"";position:absolute;inset:0;background:url('ill-rook.jpg') 88% 40%/auto 118% no-repeat;
+#visits::before{content:"";position:absolute;inset:0;background:url('ill-rook-800.webp') 88% 40%/auto 118% no-repeat;
   filter:invert(1);mix-blend-mode:screen;opacity:.17;pointer-events:none}
 .visit-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,4.6vw,58px);align-items:start;margin-top:26px}
 .offer{list-style:none;margin-top:24px;display:grid;gap:15px}
@@ -251,7 +355,7 @@ nav.links a:hover{color:#fff}
 #newsletter{text-align:center;position:relative;overflow:hidden}
 #newsletter::before{content:"";position:absolute;inset:0;
   background:radial-gradient(60% 55% at 50% 12%,rgba(168,242,74,.12),transparent 62%)}
-#newsletter::after{content:"";position:absolute;inset:0;background:url('ill-map.jpg') center/cover no-repeat;
+#newsletter::after{content:"";position:absolute;inset:0;background:url('ill-map-1200.webp') center/cover no-repeat;
   filter:invert(1);mix-blend-mode:screen;opacity:.1;pointer-events:none}
 #newsletter .box{max-width:680px;margin:0 auto;position:relative;z-index:2}
 #newsletter .ml-form-embedContainer,#newsletter .ml-form-embedWrapper{background:transparent!important;
@@ -288,6 +392,10 @@ footer{border-top:1px solid rgba(236,231,218,.1);padding:54px 0 40px;background:
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1!important;transform:none!important}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--acid);color:var(--ink);font-weight:800;padding:10px 16px;border-radius:3px;text-decoration:none;transition:top .15s}
+.skip:focus{top:12px;outline:2px solid #fff;outline-offset:2px}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--acid);outline-offset:3px;border-radius:2px}
 
 @media(max-width:940px){
   .chapter{grid-template-columns:1fr;min-height:auto;text-align:left}
@@ -313,6 +421,7 @@ ml('account','2489284');
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <div class="warnbar"><b>⚠ Warning</b> may cause late nights, dead torch batteries, and one more chapter.</div>
 
@@ -331,6 +440,7 @@ ml('account','2489284');
 </header>
 
 <a id="top"></a>
+<main id="main">
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="hero">
@@ -359,22 +469,22 @@ ml('account','2489284');
 
 <section class="inkband" aria-hidden="true">
   <div class="track">
-    <figure><img src="ill-gate.jpg" alt=""></figure>
-    <figure><img src="ill-woods.jpg" alt=""></figure>
-    <figure><img src="ill-stairs.jpg" alt=""></figure>
-    <figure><img src="ill-crowd.jpg" alt=""></figure>
-    <figure><img src="ill-bedroom.jpg" alt=""></figure>
-    <figure><img src="ill-headphones.jpg" alt=""></figure>
-    <figure><img src="ill-ruin.jpg" alt=""></figure>
-    <figure><img src="ill-wall.jpg" alt=""></figure>
-    <figure><img src="ill-gate.jpg" alt=""></figure>
-    <figure><img src="ill-woods.jpg" alt=""></figure>
-    <figure><img src="ill-stairs.jpg" alt=""></figure>
-    <figure><img src="ill-crowd.jpg" alt=""></figure>
-    <figure><img src="ill-bedroom.jpg" alt=""></figure>
-    <figure><img src="ill-headphones.jpg" alt=""></figure>
-    <figure><img src="ill-ruin.jpg" alt=""></figure>
-    <figure><img src="ill-wall.jpg" alt=""></figure>
+    <figure><img src="ill-gate-640.webp" alt="" width="640" height="947" decoding="async"></figure>
+    <figure><img src="ill-woods-640.webp" alt="" width="640" height="947" decoding="async"></figure>
+    <figure><img src="ill-stairs-640.webp" alt="" width="640" height="947" decoding="async"></figure>
+    <figure><img src="ill-crowd-640.webp" alt="" width="640" height="947" decoding="async"></figure>
+    <figure><img src="ill-bedroom-640.webp" alt="" width="640" height="947" decoding="async"></figure>
+    <figure><img src="ill-headphones-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-ruin-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-wall-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-gate-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-woods-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-stairs-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-crowd-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-bedroom-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-headphones-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-ruin-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
+    <figure><img src="ill-wall-640.webp" alt="" width="640" height="947" decoding="async" loading="lazy"></figure>
   </div>
   <p class="caption">Bikes, torches, and a hole in the world <em>nobody else noticed.</em></p>
 </section>
@@ -383,8 +493,8 @@ ml('account','2489284');
 <section id="books">
 
   <article class="chapter reveal" style="--accent:var(--glimm);--wx:74%">
-    <div class="wash"></div><div class="plate" style="background-image:url('ill-radio.jpg');--px:86%"></div><div class="bignum">01</div>
-    <div class="coverstage"><img src="boys-1.jpg" alt="The Weird Map in Mr Glimm's Skull — cover"></div>
+    <div class="wash"></div><div class="plate" style="background-image:url('ill-radio-800.webp');--px:86%"></div><div class="bignum">01</div>
+    <div class="coverstage"><img src="boys-1-800.webp" alt="The Weird Map in Mr Glimm's Skull — cover" width="800" height="1183"></div>
     <div class="copy">
       <span class="tag"><i class="rule"></i> Felix Jones · Book One</span>
       <h3>The Weird Map in Mr&nbsp;Glimm's Skull</h3>
@@ -398,8 +508,8 @@ ml('account','2489284');
   </article>
 
   <article class="chapter flip reveal" style="--accent:var(--clock);--wx:26%">
-    <div class="wash"></div><div class="plate" style="background-image:url('ill-crab.jpg');--px:12%"></div><div class="bignum">02</div>
-    <div class="coverstage"><img src="clockwork-cover.jpg" alt="The Clockwork Terror of Blackglass Island — cover"></div>
+    <div class="wash"></div><div class="plate" style="background-image:url('ill-crab-800.webp');--px:12%"></div><div class="bignum">02</div>
+    <div class="coverstage"><img src="clockwork-cover.jpg" alt="The Clockwork Terror of Blackglass Island — cover" width="397" height="595"></div>
     <div class="copy">
       <span class="tag"><i class="rule"></i> Felix Jones · Book Two <b class="newflag">Out now</b></span>
       <h3>The Clockwork Terror of Blackglass Island</h3>
@@ -413,8 +523,8 @@ ml('account','2489284');
   </article>
 
   <article class="chapter reveal" style="--accent:var(--deep);--wx:74%">
-    <div class="wash"></div><div class="plate" style="background-image:url('ill-door.jpg');--px:86%"></div><div class="bignum">03</div>
-    <div class="coverstage"><img src="boys-2.jpg" alt="Terror From the Deep — cover"></div>
+    <div class="wash"></div><div class="plate" style="background-image:url('ill-door-800.webp');--px:86%"></div><div class="bignum">03</div>
+    <div class="coverstage"><img src="boys-2-800.webp" alt="Terror From the Deep — cover" width="800" height="1105"></div>
     <div class="copy">
       <span class="tag"><i class="rule"></i> A standalone adventure</span>
       <h3>Terror From the Deep</h3>
@@ -510,11 +620,11 @@ ml('account','2489284');
     <h2 class="reveal">Short stories, in good company.</h2>
     <p class="sub reveal">Stories in Raconteur Press anthologies for young readers, edited by David Badurina and Dave Freer.</p>
     <div class="shelf reveal">
-      <a class="tile" href="https://links.maloryauthor.com/pet-monsters" target="_blank" rel="noopener"><img src="pet-monsters.jpg" alt="Pet Monsters anthology cover" loading="lazy"><b>Pet Monsters</b><small>Raconteur Press</small></a>
-      <a class="tile" href="https://links.maloryauthor.com/crashed-landings" target="_blank" rel="noopener"><img src="crashed-landings.jpg" alt="Crashed Landings anthology cover" loading="lazy"><b>Crashed Landings</b><small>“Static in the Pines”</small></a>
-      <a class="tile" href="https://links.maloryauthor.com/insert-coin" target="_blank" rel="noopener"><img src="insert-coin.jpg" alt="Insert Coin anthology cover" loading="lazy"><b>Insert Coin</b><small>Raconteur Press</small></a>
-      <a class="tile" href="https://links.maloryauthor.com/mad-science" target="_blank" rel="noopener"><img src="mad-science-1.jpg" alt="Mad Science! anthology cover" loading="lazy"><b>Mad Science!</b><small>ed. Dave Freer</small></a>
-      <a class="tile" href="https://links.maloryauthor.com/mad-science-2" target="_blank" rel="noopener"><img src="mad-science-2.jpg" alt="Mad Science: Bits and Pieces cover" loading="lazy"><b>Bits &amp; Pieces</b><small>Mad Science 2</small></a>
+      <a class="tile" href="https://links.maloryauthor.com/pet-monsters" target="_blank" rel="noopener"><img src="pet-monsters-480.webp" alt="Pet Monsters anthology cover" loading="lazy" width="480" height="720"><b>Pet Monsters</b><small>Raconteur Press</small></a>
+      <a class="tile" href="https://links.maloryauthor.com/crashed-landings" target="_blank" rel="noopener"><img src="crashed-landings-480.webp" alt="Crashed Landings anthology cover" loading="lazy" width="480" height="710"><b>Crashed Landings</b><small>“Static in the Pines”</small></a>
+      <a class="tile" href="https://links.maloryauthor.com/insert-coin" target="_blank" rel="noopener"><img src="insert-coin-480.webp" alt="Insert Coin anthology cover" loading="lazy" width="480" height="710"><b>Insert Coin</b><small>Raconteur Press</small></a>
+      <a class="tile" href="https://links.maloryauthor.com/mad-science" target="_blank" rel="noopener"><img src="mad-science-1-480.webp" alt="Mad Science! anthology cover" loading="lazy" width="480" height="710"><b>Mad Science!</b><small>ed. Dave Freer</small></a>
+      <a class="tile" href="https://links.maloryauthor.com/mad-science-2" target="_blank" rel="noopener"><img src="mad-science-2-480.webp" alt="Mad Science: Bits and Pieces cover" loading="lazy" width="480" height="710"><b>Bits &amp; Pieces</b><small>Mad Science 2</small></a>
     </div>
   </div>
 </section>
@@ -522,15 +632,15 @@ ml('account','2489284');
 <!-- ================= ABOUT ================= -->
 <section class="band" id="about">
   <div class="wrap about-grid">
-    <div class="portrait reveal"><img src="malory-photo.jpg" alt="Malory, author"></div>
+    <div class="portrait reveal"><img src="malory-photo.jpg" alt="Malory, author" width="382" height="539"></div>
     <div class="about reveal">
       <p class="kicker">About Malory</p>
       <h2>A return to the adventures that used to pull kids into reading.</h2>
       <p>I started writing these for my own son, more or less, and the only rule I've stuck to is that every chapter needs a reason to keep reading, which mostly means no lectures, no detours and no easy outs, though the odd detour sneaks in when a monster demands it. If a book earns the late-night torch under the duvet, it's done its job.</p>
       <p>When I'm not writing them I'm researching a doctorate at the University of Worcester on why children stop reading for pleasure, which turns out to be the same question the books are trying to answer. I also won the 2026 Jim Baen Memorial Award and review short fiction for Tangent Online, and the books come out through Watchful Wizard and Raconteur Press.</p>
       <div class="creds-strip">
-        <a class="cred-item" href="https://www.baen.com/" target="_blank" rel="noopener"><span class="cmk"><img src="baen-logo.png" alt="Baen Books"></span><span class="ctxt"><b>Jim Baen Award</b><small>2026 winner</small></span></a>
-        <a class="cred-item" href="https://www.worcester.ac.uk/" target="_blank" rel="noopener"><span class="cmk"><img src="worcester-logo.jpg" alt="University of Worcester"></span><span class="ctxt"><b>Univ. of Worcester</b><small>Doctoral researcher</small></span></a>
+        <a class="cred-item" href="https://www.baen.com/" target="_blank" rel="noopener"><span class="cmk"><img src="baen-logo.png" alt="Baen Books" width="125" height="125"></span><span class="ctxt"><b>Jim Baen Award</b><small>2026 winner</small></span></a>
+        <a class="cred-item" href="https://www.worcester.ac.uk/" target="_blank" rel="noopener"><span class="cmk"><img src="worcester-logo.jpg" alt="University of Worcester" width="200" height="200"></span><span class="ctxt"><b>Univ. of Worcester</b><small>Doctoral researcher</small></span></a>
         <a class="cred-item" href="https://www.tangentonline.com/" target="_blank" rel="noopener"><span class="cmk">✍</span><span class="ctxt"><b>Tangent Online</b><small>Reviewer</small></span></a>
       </div>
       <p style="margin-top:26px"><a class="btn btn-ghost" href="https://maloryauthor.com" target="_blank" rel="noopener">See Malory's other worlds →</a></p>
@@ -560,12 +670,13 @@ ml('account','2489284');
     <div class="msci reveal">
       <p>The story first appeared in <b>Mad Science!</b>, a Raconteur Press anthology edited by <b>Dave Freer</b>. There's a Book 2, as well.</p>
       <div class="msci-covers">
-        <a href="https://links.maloryauthor.com/mad-science" target="_blank" rel="noopener"><img src="mad-science-1.jpg" alt="Mad Science! anthology cover" loading="lazy"><span>Mad Science!</span></a>
-        <a href="https://links.maloryauthor.com/mad-science-2" target="_blank" rel="noopener"><img src="mad-science-2.jpg" alt="Mad Science: Bits and Pieces cover" loading="lazy"><span>Bits &amp; Pieces · Book 2</span></a>
+        <a href="https://links.maloryauthor.com/mad-science" target="_blank" rel="noopener"><img src="mad-science-1-480.webp" alt="Mad Science! anthology cover" loading="lazy" width="480" height="710"><span>Mad Science!</span></a>
+        <a href="https://links.maloryauthor.com/mad-science-2" target="_blank" rel="noopener"><img src="mad-science-2-480.webp" alt="Mad Science: Bits and Pieces cover" loading="lazy" width="480" height="710"><span>Bits &amp; Pieces · Book 2</span></a>
       </div>
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
@@ -613,10 +724,20 @@ hero.addEventListener('pointermove',function(e){
 });
 
 /* reveal on scroll */
-var io=new IntersectionObserver(function(es){
-  es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%3*90)+'ms';io.observe(el)});
+/* Belt and braces (2026-09-02): .reveal starts at opacity 0 in CSS, so anything that stops
+   the observer firing — no IntersectionObserver, a throwing script, a tab that never gets a
+   rendering frame — used to leave the whole page invisible. Now: no-JS shows everything via
+   .no-js, a missing IO shows everything, and a 2.5s timer reveals whatever is still hidden. */
+var revealEls=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)){
+  revealEls.forEach(function(el){el.classList.add('in')});
+}else{
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
+  },{threshold:.12});
+  revealEls.forEach(function(el,i){el.style.transitionDelay=(i%3*90)+'ms';io.observe(el)});
+}
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},2500);
 </script>
 
 <!-- School-visit enquiry: always emails Malory via formsubmit, and ALSO subscribes the
